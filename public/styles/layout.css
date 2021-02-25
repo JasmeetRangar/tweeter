@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #fab349;
+  background-color: #0a167e;
 background-image: url("https://www.transparenttextures.com/patterns/bo-play.png");
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -30,7 +30,7 @@ body header .nameTag {
   align-self: center;
   padding-top: 1em;
   width: 90%;
-  background-color: #fab349;
+  background-color: #0a167e;
   color: blue;
   display: flex;
   flex-direction: column;
@@ -46,20 +46,31 @@ body header .nameTag {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   opacity: 100%;
-   border: none;
+   border: 0px;
    padding: 0px;
    margin: 0px;
  }
+ /*Tablets specific css*/
  @media only screen and (min-width: 1024px) {
-  /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
   .pageContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    opacity: 100%;
-    border: none;
+    border: 0px;
     padding: 0px;
     margin: 0px;
+  }
+  .container {
+    display: flex;
+    align-self: center;
+    padding-top: 1em;
+    width: 45%;
+    background-color: #0a167e;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: 5%;
   }
 }

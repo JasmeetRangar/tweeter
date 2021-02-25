@@ -8,7 +8,10 @@ $(document).ready(function () {
   $('.toggleButton').on('click', navToggle);
   $('.tweetForm').on('submit', tweetSubmit);
 })
-
+/**Takes an array of tweets
+ * 
+ * @param {array of tweets} tweets 
+ */
 const renderTweets = function (tweets) {
   $('.tweetContainer').html("");
   // loops through tweets
@@ -52,7 +55,7 @@ const createTweetElement = function (tweet) {
 
 const navToggle = function () {
   $('.new-tweet').slideToggle();
-  $('.new-tweet').focus();
+  $('#tweet-text').focus();
 }
 const tweetSubmit = function (event) {
   event.preventDefault();
