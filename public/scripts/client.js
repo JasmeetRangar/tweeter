@@ -1,4 +1,7 @@
-
+const navToggle = function (){
+  $('.new-tweet').slideToggle();
+  $('.new-tweet').focus();
+}
 
 $(document).ready(function () {
   $.ajax('/tweets/', {
@@ -6,10 +9,7 @@ $(document).ready(function () {
   }).then((response) => {
     renderTweets(response);
   })
-$('.toggleButton').on('click',function (){
-  $('.new-tweet').slideToggle();
-  $('.new-tweet').focus();
-})
+$('.toggleButton').on('click',navToggle)
   $('.tweetForm').on('submit', function (event) {
     event.preventDefault();
     if ($("#tweet-text").val().length > 140) {
