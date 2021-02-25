@@ -1,9 +1,7 @@
 .tweetContainer {
-  width: 90%;
-  
+  width: 900 px;  
 }
 article {
-  width: 100%;
   border: solid 4px black;
   color: white;
   margin: 5%;  
@@ -16,13 +14,13 @@ article:hover {
   box-shadow: 10px 8px black;  
 }
 .tweetContainer header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgba(143, 134, 134, 0.993);
+  color: rgba(83, 77, 77, 0.993);
   padding-left: 2%;
   padding-right: 2%;
-  font-size: 80%;
   margin-bottom: 3%;
   margin-top: 2%;
 }
@@ -48,7 +46,7 @@ article:hover {
 .tweetContainer footer {
   display: flex;
   justify-content: space-between;
-  color: rgba(143, 134, 134, 0.993);  
+  color: rgba(83, 77, 77, 0.993);  
   border-top: solid 4px black;
   padding-left: 2%;
   padding-right: 2%;

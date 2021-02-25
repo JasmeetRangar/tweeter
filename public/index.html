@@ -14,6 +14,8 @@
   </link>
   </link>
   <!-- Meta Information -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
@@ -48,36 +50,38 @@
       </button>
     </span>
   </nav>
-  <header>
-    <div class="avatar">
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div class="nameTag">
-      <h2>Jasmeet</h2>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
+  <article class="pageContainer">
+    <header>
+      <div class="avatar">
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div class="nameTag">
+        <h2>Jasmeet</h2>
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
 
-  <main class="container">
-    <section class="new-tweet">
-      <span class="tweetError">
-        <i class="fas fa-exclamation-triangle"></i>
-        <span class="errorText">Error</span>
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
-      <form method="POST" action="/tweets/" class="tweetForm">
-        <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
-        <div class="tweetFooter">
-          <button type="submit" class="tweetButton">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section class="tweetContainer">
+    <main class="container">
+      <section class="new-tweet">
+        <span class="tweetError">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span class="errorText">Error</span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+        <form method="POST" action="/tweets/" class="tweetForm">
+          <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+          <div class="tweetFooter">
+            <button type="submit" class="tweetButton">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section class="tweetContainer">
 
-    </section>
-  </main>
+      </section>
+    </main>
+  </article>
 </body>
 
 </html>

@@ -5,8 +5,8 @@ $(document).ready(function () {
   }).then((response) => {
     renderTweets(response);
   })
-$('.toggleButton').on('click',navToggle);
-  $('.tweetForm').on('submit', tweetSubmit);           
+  $('.toggleButton').on('click', navToggle);
+  $('.tweetForm').on('submit', tweetSubmit);
 })
 
 const renderTweets = function (tweets) {
@@ -20,7 +20,7 @@ const renderTweets = function (tweets) {
     // takes return value and appends it to the tweets container
     $(".tweetContainer").append($tweet);
   }
-}  
+}
 const createTweetElement = function (tweet) {
   const name = tweet.user.name;
   const handle = tweet.user.handle;
@@ -30,8 +30,8 @@ const createTweetElement = function (tweet) {
   const today = new Date().getTime();
   const time = Math.floor((today - timeStamp) / 1000 / 60 / 60 / 24);
   let singleTweet = `
-  <article>
-<header>
+          <article class="singleTweet">
+          <header>
           <div class="headerLeft">
           <img class="tweetAvatar" src="${avatarUrl}">
           <div>${name}</div>
@@ -46,17 +46,17 @@ const createTweetElement = function (tweet) {
           </footer>
           </article>
           `;
-          
-          return singleTweet;
-        }
 
-const navToggle = function (){
+  return singleTweet;
+}
+
+const navToggle = function () {
   $('.new-tweet').slideToggle();
   $('.new-tweet').focus();
 }
 const tweetSubmit = function (event) {
   event.preventDefault();
-  if ($("#tweet-text").val().length > 140) {     
+  if ($("#tweet-text").val().length > 140) {
     $('.errorText').text('Cannot submit more than 140 characters');
     $('.tweetError').slideDown();
   } else if ($("#tweet-text").val().length === 0) {
