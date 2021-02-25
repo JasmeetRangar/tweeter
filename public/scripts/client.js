@@ -2,6 +2,32 @@ const navToggle = function (){
   $('.new-tweet').slideToggle();
   $('.new-tweet').focus();
 }
+const tweetSubmit = function (event) {
+  event.preventDefault();
+  if ($("#tweet-text").val().length > 140) {     
+    $('.errorText').text('Cannot submit more than 140 characters');
+    $('.tweetError').slideDown();
+  } else if ($("#tweet-text").val().length === 0) {
+    $('.errorText').text('Cannot submit blank tweet');
+    $('.tweetError').slideDown();
+  } else {
+    let content = $(this).serialize();
+    $('#tweet-text').val("");
+    $('.tweetError').slideUp();
+    $('.counter').text('140');
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: content
+    }).done(() => {
+      $.ajax('/tweets/', {
+        method: 'GET'
+      }).then((response) => {
+        renderTweets(response.slice(response.length - 1))
+      })
+    });
+  }
+}
 
 $(document).ready(function () {
   $.ajax('/tweets/', {
@@ -9,36 +35,8 @@ $(document).ready(function () {
   }).then((response) => {
     renderTweets(response);
   })
-$('.toggleButton').on('click',navToggle)
-  $('.tweetForm').on('submit', function (event) {
-    event.preventDefault();
-    if ($("#tweet-text").val().length > 140) {
-      //$('.tweetError').css('display','block');      
-      $('.errorText').text('Cannot submit more than 140 characters');
-      $('.tweetError').slideDown();
-    } else if ($("#tweet-text").val().length === 0) {
-      //$('.tweetError').css('display','block');
-      $('.errorText').text('Cannot submit blank tweet');
-      $('.tweetError').slideDown();
-    } else {
-      let content = $(this).serialize();
-      //$('.tweetError').css('display','none');
-      $('#tweet-text').val("");
-      $('.tweetError').slideUp();
-      $('.counter').text('140');
-      $.ajax({
-        type: "POST",
-        url: "/tweets/",
-        data: content
-      }).done(() => {
-        $.ajax('/tweets/', {
-          method: 'GET'
-        }).then((response) => {
-          renderTweets(response.slice(response.length - 1))
-        })
-      });
-    }
-  })
+$('.toggleButton').on('click',navToggle);
+  $('.tweetForm').on('submit', tweetSubmit);
 
 
   const renderTweets = function (tweets) {

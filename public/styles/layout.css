@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #281aac;
+  background-color: #fab349;
 background-image: url("https://www.transparenttextures.com/patterns/bo-play.png");
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -29,7 +29,7 @@ body header .nameTag {
   width: 90%;
   display: flex;
   align-self: center;
-  background-color: #281aac;
+  background-color: #fab349;
   color: blue;
   display: flex;
   flex-direction: column;
