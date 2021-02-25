@@ -17,9 +17,10 @@
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
   <script src="https://kit.fontawesome.com/0cf7ce391b.js" crossorigin="anonymous"></script>
-    
+
 
 
   <!-- App CSS -->
@@ -42,7 +43,10 @@
     <span class="heading">tweeter</span>
     <span class="prompt"><b>Write</b> a new
       tweet<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="./images/arrows.JPG"></span>
+      <button class="toggleButton">
+        <i class="fas fa-angle-double-down"></i>
+      </button>
+    </span>
   </nav>
   <header>
     <div class="avatar">
@@ -57,7 +61,11 @@
 
   <main class="container">
     <section class="new-tweet">
-      <span class="tweetError"><i class="fas fa-exclamation-triangle"></i><span class="errorText">Error</span><i class="fas fa-exclamation-triangle"></i></span>
+      <span class="tweetError">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span class="errorText">Error</span>
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
       <form method="POST" action="/tweets/" class="tweetForm">
         <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
         <div class="tweetFooter">
@@ -67,7 +75,7 @@
       </form>
     </section>
     <section class="tweetContainer">
-      
+
     </section>
   </main>
 </body>

@@ -14,3 +14,18 @@
 .prompt {
   float: right;
 }
+.toggleButton {
+  background-color: #4056A1;
+}
+.fas {
+  color: red;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}

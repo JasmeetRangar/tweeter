@@ -6,19 +6,26 @@ $(document).ready(function () {
   }).then((response) => {
     renderTweets(response);
   })
-
+$('.toggleButton').on('click',function (){
+  $('.new-tweet').slideToggle();
+  $('.new-tweet').focus();
+})
   $('.tweetForm').on('submit', function (event) {
     event.preventDefault();
     if ($("#tweet-text").val().length > 140) {
-      $('.tweetError').css('display','block');
+      //$('.tweetError').css('display','block');      
       $('.errorText').text('Cannot submit more than 140 characters');
+      $('.tweetError').slideDown();
     } else if ($("#tweet-text").val().length === 0) {
-      $('.tweetError').css('display','block');
+      //$('.tweetError').css('display','block');
       $('.errorText').text('Cannot submit blank tweet');
+      $('.tweetError').slideDown();
     } else {
       let content = $(this).serialize();
-      $('.tweetError').css('display','none');
+      //$('.tweetError').css('display','none');
       $('#tweet-text').val("");
+      $('.tweetError').slideUp();
+      $('.counter').text('140');
       $.ajax({
         type: "POST",
         url: "/tweets/",
