@@ -26,9 +26,10 @@ body header .nameTag {
   color: ivory;
 }
 .container {
-  width: 90%;
   display: flex;
   align-self: center;
+  padding-top: 1em;
+  width: 90%;
   background-color: #fab349;
   color: blue;
   display: flex;

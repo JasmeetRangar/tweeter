@@ -41,6 +41,8 @@ $('.toggleButton').on('click',navToggle);
 
   const renderTweets = function (tweets) {
     // loops through tweets
+    //const sortedTweets = tweets.sort((a, b) => b.created_at - a.created_at);
+
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
       let $tweet = createTweetElement(tweet);
