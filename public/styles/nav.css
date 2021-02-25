@@ -1,0 +1,16 @@
+.nav-bar {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;  
+  position: sticky;
+  top: 0;
+}
+.heading {
+  font-family: 'Bungee', sans-serif;
+  font-size: 36px;
+}
+.prompt {
+  float: right;
+}

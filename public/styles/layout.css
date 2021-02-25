@@ -16,8 +16,26 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #281aac;
+background-image: url("https://www.transparenttextures.com/patterns/bo-play.png");
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+body header .nameTag {
+  color: ivory;
+}
+.container {
+  width: 90%;
+  display: flex;
+  align-self: center;
+  background-color: #281aac;
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin: 5%;
 }
 
 /*
