@@ -1,3 +1,7 @@
+!["Write new Tweet"](https://github.com/JasmeetRangar/tweeter/blob/master/public/docs/new-tweet.JPG)
+!["Tweet added"](https://github.com/JasmeetRangar/tweeter/blob/master/public/docs/dashboard.JPG)
+!["Tablet supported"](https://github.com/JasmeetRangar/tweeter/blob/master/public/docs/tablet.JPG)
+
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
@@ -15,3 +19,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- md5

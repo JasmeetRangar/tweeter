@@ -43,10 +43,10 @@
 .tweet {
   padding: 2%;
 }
-.tweetContainer:hover .handle {
+.singleTweet:hover .handle {
   display: block;
 } 
-.tweetContainer:hover .icons {
+.singleTweet:hover .icons {
   display: block;
 } 
 .tweetContainer footer {
