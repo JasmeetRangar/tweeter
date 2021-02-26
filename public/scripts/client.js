@@ -67,7 +67,7 @@ const createTweetElement = function (tweet) {
           <span class="tweet">${content}</span>
           <footer>
           <div> ${time} days ago </div>
-          <div>🏴 📟 ❤</div>
+          <div class="icons">🏴 📟 ❤</div>
           </footer>
           </article>
           `;

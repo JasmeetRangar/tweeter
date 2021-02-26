@@ -37,10 +37,16 @@
 .handle {
   display: none;
 }
+.icons {
+  display: none;
+}
 .tweet {
   padding: 2%;
 }
 .tweetContainer:hover .handle {
+  display: block;
+} 
+.tweetContainer:hover .icons {
   display: block;
 } 
 .tweetContainer footer {
