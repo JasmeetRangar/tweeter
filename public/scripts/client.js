@@ -7,8 +7,26 @@ $(document).ready(function () {
   })
   $('.toggleButton').on('click', navToggle);
   $('.tweetForm').on('submit', tweetSubmit);
+  $(document).scroll(() => $('.goToTopButton').css('display', 'block'));
+  $(document).scrollTop(() => $('.goToTopButton').css('display', 'none'));
+  //scroll to top button response and css to hide and show
+  $('.goToTopButton').on('click', topFunction);
+  window.onscroll = function () { scrollFunction() };  
+  function scrollFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      $('.goToTopButton').css('display', 'block');
+    } else {
+      $('.goToTopButton').css('display', 'none');
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 })
-/**Takes an array of tweets
+
+/**Takes an array of tweets and renders them to the client page
  * 
  * @param {array of tweets} tweets 
  */
@@ -24,6 +42,10 @@ const renderTweets = function (tweets) {
     $(".tweetContainer").append($tweet);
   }
 }
+/**Takes a single tweet and returns the html container of the input tweet
+ * 
+ * @param {One single tweet object} tweet 
+ */
 const createTweetElement = function (tweet) {
   const name = tweet.user.name;
   const handle = tweet.user.handle;
@@ -52,11 +74,17 @@ const createTweetElement = function (tweet) {
 
   return singleTweet;
 }
-
+/**Makes the Write new tweet button toggle text box
+ * 
+ */
 const navToggle = function () {
   $('.new-tweet').slideToggle();
   $('#tweet-text').focus();
 }
+/**Sumbits tweets from text box and appends it to container dynamically
+ * 
+ * @param {*} event 
+ */
 const tweetSubmit = function (event) {
   event.preventDefault();
   if ($("#tweet-text").val().length > 140) {

@@ -50,6 +50,23 @@ body header .nameTag {
    padding: 0px;
    margin: 0px;
  }
+ .goToTopButton {
+   border-radius: 50%;
+   background-color: rgb(59, 189, 8);
+   color: white;
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
+   height: 3em;
+   width: 3em;
+   display: none;
+ }
+ .goToTopButton:hover {
+   background-color: rgb(243, 255, 71);
+ }
+ .fa-angle-double-up {
+   color: white;
+ }
  /*Tablets specific css*/
  @media only screen and (min-width: 1024px) {
   .pageContainer {
@@ -58,7 +75,7 @@ body header .nameTag {
     justify-content: center;
     border: 0px;
     padding: 0px;
-    margin: 0px;
+    margin: 0px;    
   }
   .container {
     display: flex;
