@@ -1,5 +1,8 @@
+Write new Tweet
 !["Write new Tweet"](https://github.com/JasmeetRangar/tweeter/blob/master/public/docs/new-tweet.JPG)
+Tweet added
 !["Tweet added"](https://github.com/JasmeetRangar/tweeter/blob/master/public/docs/dashboard.JPG)
+Tablet supported
 !["Tablet supported"](https://github.com/JasmeetRangar/tweeter/blob/master/public/docs/tablet.JPG)
 
 # Tweeter Project
